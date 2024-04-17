@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Github Issue Id</th>
+        <th scope="col">Repository</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let issue of issues">
+        <th>{{issue.githubIssueId}}</th>
+        <th>{{issue.title}}</th>
+        <th><a class="btn btn-primary" [href]="issue.url" target="_blank"
+               role="button"><fa-icon [icon]="faLink"></fa-icon>Go To Github</a></th>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
