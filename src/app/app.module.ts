@@ -15,6 +15,7 @@ import {IssueListComponent} from "./issues/issue-list/issue-list.component";
 import {AccordionModule} from "ngx-bootstrap/accordion";
 import {AcceptComponent} from "./challenges/accept/accept.component";
 import {RejectComponent} from "./challenges/reject/reject.component";
+import {ChallengeListComponent} from "./challenges/challenge-list/challenge-list.component";
 
 
 
@@ -24,18 +25,19 @@ const routes: Routes = [
   {path: 'import', component: ImportComponent},
   {path: 'challenge/:id/issues', component: IssueListComponent},
   {path: 'challenge/:id/accept', component: AcceptComponent},
-  {path: 'repository/:id/reject', component: RejectComponent},
+  {path: 'challenge/:id/reject', component: RejectComponent},
+  {path: 'challenges', component: ChallengeListComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,
     HomeComponent,
     ImportComponent
   ],
   imports: [
     BrowserModule,
+    AppComponent,
     RouterOutlet,
     RouterModule.forRoot(routes),
     RouterLink,
@@ -48,7 +50,6 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
