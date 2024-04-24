@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from "@angular/platform-browser";
 import {HomeComponent} from "./home/home.component";
 import {ImportComponent} from "./import/import.component";
-import {RouterModule, Routes,RouterLink, RouterOutlet} from "@angular/router";
+import {RouterModule, Routes, RouterLink, RouterOutlet} from "@angular/router";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
@@ -16,8 +16,7 @@ import {AccordionModule} from "ngx-bootstrap/accordion";
 import {AcceptComponent} from "./challenges/accept/accept.component";
 import {RejectComponent} from "./challenges/reject/reject.component";
 import {ChallengeListComponent} from "./challenges/challenge-list/challenge-list.component";
-
-
+import {DatePipe} from "@angular/common";
 
 
 const routes: Routes = [
@@ -47,7 +46,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AccordionModule.forRoot(),
-  ],
+    DatePipe],
   exports: [RouterModule],
   providers: [],
 })
