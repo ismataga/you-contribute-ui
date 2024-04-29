@@ -17,6 +17,7 @@ import {AcceptComponent} from "./challenges/accept/accept.component";
 import {RejectComponent} from "./challenges/reject/reject.component";
 import {ChallengeListComponent} from "./challenges/challenge-list/challenge-list.component";
 import {DatePipe} from "@angular/common";
+import {SigninComponent} from "./auth/signin/signin.component";
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'challenge/:id/accept', component: AcceptComponent},
   {path: 'challenge/:id/reject', component: RejectComponent},
   {path: 'challenges', component: ChallengeListComponent},
+  {path: 'signin', component: SigninComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
